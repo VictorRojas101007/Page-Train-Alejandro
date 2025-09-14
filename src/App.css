@@ -1,0 +1,684 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Lexend', 'Noto Sans', sans-serif;
+  background-color: #181111;
+  color: white;
+  line-height: 1.5;
+}
+
+/* Main container */
+.design-root {
+  position: relative;
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+  flex-direction: column;
+  background-color: #181111;
+  justify-content: space-between;
+  overflow-x: hidden;
+}
+
+/* Container */
+.container {
+  width: 100%;
+}
+
+/* Hero Section */
+.hero-wrapper {
+  padding: 0;
+}
+
+@media (min-width: 480px) {
+  .hero-wrapper {
+    padding: 16px;
+  }
+}
+
+.hero-section {
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0) 25%), 
+                    url("/public/Alejandroimg2.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  overflow: hidden;
+  background-color: #181111;
+  min-height: 320px;
+  border-radius: 0;
+}
+
+@media (min-width: 480px) {
+  .hero-section {
+    border-radius: 8px;
+  }
+}
+
+@media (min-width: 800px) {
+  .hero-section {
+        background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0) 25%), 
+    url("/public/Alejandroimg.jpg");
+    background-position: top;
+    min-height: 500px;
+  }
+}
+
+.hero-content {
+  display: flex;
+  padding: 16px;
+}
+
+.hero-title {
+  color: white;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.025em;
+  margin: 0;
+}
+
+/* Section titles */
+.section-title {
+  color: white;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.015em;
+  padding: 20px 16px 12px 16px;
+  margin: 0;
+}
+
+/* Services Section */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(158px, 1fr));
+  gap: 12px;
+  padding: 16px;
+}
+
+.service-card {
+  display: flex;
+  flex: 1;
+  gap: 12px;
+  border-radius: 8px;
+  border: 1px solid #553a3a;
+  background-color: #271b1b;
+  padding: 16px;
+  flex-direction: column;
+}
+
+.service-icon {
+  color: white;
+  width: 24px;
+  height: 24px;
+}
+
+.service-content {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.service-title {
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.service-description {
+  color: #bb9b9b;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.4;
+  margin: 0;
+}
+
+/* Trainer Data Section */
+.trainer-data {
+  padding: 16px;
+  display: grid;
+  grid-template-columns: 20% 1fr;
+  gap: 0 24px;
+}
+
+.trainer-row {
+  grid-column: span 2;
+  display: grid;
+  grid-template-columns: subgrid;
+  border-top: 1px solid #553a3a;
+  padding: 20px 0;
+}
+
+.trainer-label {
+  color: #bb9b9b;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.4;
+  margin: 0;
+}
+
+.trainer-value {
+  color: white;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.4;
+  margin: 0;
+}
+
+/* Ubicación del Gimnasio */
+.gym-location {
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #271b1b 0%, #181111 100%);
+}
+
+.location-section {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.gym-location-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+.gym-location-info {
+  color: #bb9b9b;
+}
+
+.gym-location-info h3 {
+  color: #bb9b9b;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.gym-location-info p {
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.gym-hours {
+  margin-top: 30px;
+  padding: 20px;
+  background: rgba(187, 155, 155, 0.1);
+  border-radius: 10px;
+  border-left: 4px solid #bb9b9b;
+}
+
+.gym-hours h4 {
+  color: #bb9b9b;
+  margin-bottom: 15px;
+  font-size: 1.3rem;
+}
+
+.gym-location-map {
+  height: 400px;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Estilos para el mapa */
+.map-container {
+  height: 100%;
+  width: 100%;
+}
+
+.leaflet-map {
+  height: 100%;
+  width: 100%;
+  border-radius: 15px;
+}
+
+.popup-content {
+  text-align: center;
+  font-family: 'Lexend', sans-serif;
+}
+
+.popup-content h3 {
+  color: #271b1b;
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+.popup-content p {
+  margin: 5px 0;
+  color: #553a3a;
+  font-size: 0.9rem;
+}
+
+.location-image {
+  width: 100%;
+  background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAb68iPg51o3pO2VGOvMK_f20LLDspoH0acB1Ckz8jZcFqBKkyp8rAC4Jwy5VQcHr1GZLxsbw8luTikZvCKK9uzHu6EsSg7pgcT8NCF92Q2Uelroh6QoWrnuQrRF6kRY76brsnsWJUYgIdixHbraEvob2OdiTxK_7YiLh9wEsSlJddUxLlOaBJa6q0A7xNp3AZX_s_P-8VXwBM6OWecfap58uPVj1K-WEwKx3bZxs-OnOTFJ-9d0lw-LNBYP5hRdqaGXLKZ4PfaOaT7");
+  background-position: center;
+  background-repeat: no-repeat;
+  aspect-ratio: 16/9;
+  background-size: cover;
+  border-radius: 8px;
+}
+
+/* Videos Section */
+.videos-container {
+  display: flex;
+  justify-content: space-around;
+  overflow-y: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.videos-container::-webkit-scrollbar {
+  display: none;
+}
+
+.videos-scroll {
+  display: flex;
+  align-items: stretch;
+  padding: 16px;
+  gap: 12px;
+}
+
+.video-card {
+  display: flex;
+  height: 100%;
+  flex: 1;
+  flex-direction: column;
+  gap: 16px;
+  border-radius: 8px;
+  min-width: 240px;
+}
+
+.video-thumbnail {
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  aspect-ratio: 9/16;
+  background-size: cover;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+}
+
+
+/* Agregamos estilos específicos para videos */
+.video-thumbnail video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.video-2 {
+  background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCXs7OPffAsyb2itqQDxiuI7tJa80HXmHIxloaRLDzeyhb21kwmF6oIHx69TAF1akpfcZ-l_25N6-Y5xCPh7Igy6Ziuwhyr7ZAF-OZpYvvhqFugziHTcXT9POtNo0kj7-veIKqW4_xHxHtjt2aRDG3dGoXUznyVN7_rMDBXAtUenAco4ppsNJDZZfgpcC96Ekkk6oWRmdPW9ps498eoXWM2MZdOGf6q_f2lfoNUS_AcmydIBLhjRBYbwFzdQCZzB3xZFQwjs1tt655b");
+}
+
+.video-3 {
+  background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuColnN6IkAqN1VitksVDTP9iHaCwX97gBx_ViRplyDY3W4u6Xh8urEUgdqLs9CxXijudiE46FJAKlzi53jv-0qap9o15S6n1eXpQpngYqYBnt4SDuxPTwgZDj70MIO4wmv7WOf9x9rXaHZJWiH_H_jCkNDHeSIK9id6TSmZhCNfFM5DaEbOAiwJgb_VM4NAish8AY9-Rd8b8zcziSHR8N-VIT17KOVanKqi-YvNd_4VRQOx0ZEXZyGyXMEkalQv1j4-bm7BAUZS3Tz3");
+}
+
+.video-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.video-title {
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.4;
+  margin: 0;
+}
+
+.video-description {
+  color: #bb9b9b;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.4;
+  margin: 0;
+}
+
+/* Testimonials Section */
+.testimonials-section {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  overflow-x: hidden;
+  background-color: #181111;
+  padding: 16px;
+}
+
+.testimonial {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background-color: #181111;
+}
+
+.testimonial-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.testimonial-avatar {
+  background-position: center;
+  background-repeat: no-repeat;
+  aspect-ratio: 1;
+  background-size: cover;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
+
+.avatar-1 {
+  background-image: url("/public/Foto-reseña2.jpg");
+}
+
+.avatar-2 {
+  background-image: url("/public/Foto-reseña1.jpg");
+}
+
+.testimonial-user {
+  flex: 1;
+}
+
+.testimonial-name {
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.4;
+  margin: 0;
+}
+
+.testimonial-date {
+  color: #bb9b9b;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.4;
+  margin: 0;
+}
+
+.testimonial-rating {
+  display: flex;
+  gap: 2px;
+}
+
+.star {
+  color: white;
+  font-size: 20px;
+  line-height: 1;
+}
+
+.testimonial-text {
+  color: white;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.4;
+  margin: 0;
+}
+
+.testimonial-actions {
+  display: flex;
+  gap: 36px;
+  color: #bb9b9b;
+}
+
+.action-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: none;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  padding: 0;
+  font-size: 14px;
+}
+
+.action-button:hover {
+  color: white;
+}
+
+.action-button svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* WhatsApp Banner */
+@keyframes floatUpDown {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.whatsapp-banner {
+  position: fixed;
+  bottom: 90px;
+  right: 10px;
+  background: linear-gradient(135deg, #25D366, #128C7E);
+  color: white;
+  padding: 8px 12px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+  animation: floatUpDown 2s ease-in-out infinite;
+  z-index: 999;
+  font-size: 14px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.banner-text {
+  font-family: inherit;
+}
+
+.banner-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.banner-arrow svg {
+  width: 16px;
+  height: 16px;
+  transform: rotate(45deg);
+}
+
+/* WhatsApp Floating Button */
+.whatsapp-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  background: #25D366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+.whatsapp-button:hover {
+  background: #128C7E;
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
+}
+
+.whatsapp-button svg {
+  width: 28px;
+  height: 28px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .whatsapp-banner {
+    bottom: 75px;
+    right: 8px;
+    padding: 6px 10px;
+    font-size: 12px;
+  }
+  
+  .banner-arrow svg {
+    width: 14px;
+    height: 14px;
+  }
+  
+  .whatsapp-button {
+    width: 50px;
+    height: 50px;
+    bottom: 15px;
+    right: 15px;
+  }
+  
+  .whatsapp-button svg {
+    width: 24px;
+    height: 24px;
+  }
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .trainer-data {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+  
+  .trainer-row {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+  
+  .trainer-label {
+    font-weight: 500;
+  }
+  
+  .videos-scroll {
+    flex-direction: column;
+  }
+  
+  .video-card {
+    min-width: auto;
+  }
+  
+  .hero-title {
+    font-size: 24px;
+  }
+  
+  .section-title {
+    font-size: 20px;
+  }
+  
+  .gym-location-content {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  
+  .gym-location-map {
+    height: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .whatsapp-banner {
+    bottom: 65px;
+    right: 5px;
+    padding: 5px 8px;
+    font-size: 11px;
+    gap: 6px;
+  }
+  
+  .banner-arrow svg {
+    width: 12px;
+    height: 12px;
+  }
+  
+  .whatsapp-button {
+    width: 45px;
+    height: 45px;
+    bottom: 10px;
+    right: 10px;
+  }
+  
+  .whatsapp-button svg {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .hero-wrapper {
+    padding: 0;
+  }
+  
+  .hero-section {
+    border-radius: 0;
+  }
+  
+  .services-grid {
+    padding: 12px;
+  }
+  
+  .section-title {
+    padding: 16px 12px 8px 12px;
+  }
+  
+  .trainer-data {
+    padding: 12px;
+  }
+  
+  .location-section {
+    padding: 8px 12px;
+  }
+  
+  .videos-scroll {
+    padding: 12px;
+  }
+  
+  .testimonials-section {
+    padding: 12px;
+  }
+  
+  .gym-location-info h3 {
+    font-size: 1.5rem;
+  }
+  
+  .gym-location-info p {
+    font-size: 1rem;
+  }
+  
+  .gym-location-map {
+    height: 250px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .services-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .videos-scroll {
+    justify-content: center;
+  }
+  
+  .video-card {
+    max-width: 300px;
+  }
+}
