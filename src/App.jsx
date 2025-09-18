@@ -1,5 +1,7 @@
 import './App.css'
 import Map from './components/Map'
+import ImageCarousel from './components/ImageCarousel'
+import VideoCarousel from './components/VideoCarousel'
 
 function App() {
   return (
@@ -100,53 +102,18 @@ function App() {
           </div>
         </div>
 
+        {/* Results Section */}
+        <h2 className="section-title">Resultados</h2>
+        <div className="results-section">
+          <p className="section-description">Mira el antes y después de estas personas!!</p>
+          <ImageCarousel />
+        </div>
+
         {/* Training Videos Section */}
         <h2 className="section-title">Videos de Entrenamiento</h2>
-        <div className="videos-container">
-          <div className="videos-scroll">
-            <div className="video-card">
-              <video 
-                className="video-thumbnail video-1" 
-                controls 
-                muted 
-                preload="metadata"
-                style={{
-                  width: '100%',
-                  height: '100%',
-                  objectFit: 'cover',
-                  borderRadius: '8px'
-                }}
-              >
-                <source src="/tran1.mp4" type="video/mp4" />
-                Tu navegador no soporta el elemento video.
-              </video>
-              <div className="video-info">
-                <p className="video-title">Resultados</p>
-                <p className="video-description">Mira el antes y después de estas personas!!</p>
-              </div>
-            </div>
-            <div className="video-card">
-              <video 
-                className="video-thumbnail video-3" 
-                controls 
-                muted 
-                preload="metadata"
-                style={{
-                  width: '100%',
-                  height: '100%',
-                  objectFit: 'cover',
-                  borderRadius: '8px'
-                }}
-              >
-                <source src="/tran2.mp4" type="video/mp4" />
-                Tu navegador no soporta el elemento video.
-              </video>
-              <div className="video-info">
-                <p className="video-title">Entrenamiento</p>
-                <p className="video-description">Mejora tu físico con estos ejercicios</p>
-              </div>
-            </div>
-          </div>
+        <div className="training-section">
+          <p className="section-description">Mejora tu físico con estos ejercicios</p>
+          <VideoCarousel />
         </div>
 
         {/* Testimonials Section */}
