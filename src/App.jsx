@@ -121,29 +121,8 @@ function App() {
                 Tu navegador no soporta el elemento video.
               </video>
               <div className="video-info">
-                <p className="video-title">Rutina de Funcional</p>
-                <p className="video-description">Ejercicios para fortalecer tu cuerpo</p>
-              </div>
-            </div>
-            <div className="video-card">
-              <video 
-                className="video-thumbnail video-2" 
-                controls 
-                muted 
-                preload="metadata"
-                style={{
-                  width: '100%',
-                  height: '100%',
-                  objectFit: 'cover',
-                  borderRadius: '8px'
-                }}
-              >
-                <source src="/tran3.mp4" type="video/mp4" />
-                Tu navegador no soporta el elemento video.
-              </video>
-              <div className="video-info">
-                <p className="video-title">Entrenamiento de Fuerza</p>
-                <p className="video-description">Mejora tu fuerza con estos ejercicios</p>
+                <p className="video-title">Resultados</p>
+                <p className="video-description">Mira el antes y después de estas personas!!</p>
               </div>
             </div>
             <div className="video-card">
@@ -163,8 +142,8 @@ function App() {
                 Tu navegador no soporta el elemento video.
               </video>
               <div className="video-info">
-                <p className="video-title">Entrenamiento de Gluteos</p>
-                <p className="video-description">Mejora tu gluteo con estos ejercicios</p>
+                <p className="video-title">Entrenamiento</p>
+                <p className="video-description">Mejora tu físico con estos ejercicios</p>
               </div>
             </div>
           </div>
